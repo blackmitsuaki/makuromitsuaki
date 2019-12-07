@@ -1,0 +1,13 @@
+type Idol {
+  id: ID!
+  nameKana: String!
+  nameKanji: String!
+  url: String!
+  isAdult: Boolean!
+}
+
+type Query {
+  allIdols: [Idol!]
+  idolById(id: ID!): Idol
+  idolByAdult(isAdult: Boolean!): [Idol!]
+}
